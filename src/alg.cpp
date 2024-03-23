@@ -30,17 +30,6 @@ uint64_t nPrime(uint64_t n) {
 }
 
 uint64_t nextPrime(uint64_t value) {
-    int nextPrime = value + 1;
-
-    while (true) {
-        if (checkPrime(nextPrime)) {
-            return nextPrime;
-        }
-        nextPrime++;
-    }
-}
-
-uint64_t nextPrime(uint64_t value) {
     bool flag = true;
     uint64_t a = 0;
     for (uint64_t j = (value + 1); flag == true; j++) {
