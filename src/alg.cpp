@@ -41,14 +41,17 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t nextPrime(uint64_t value) {
-    int nextPrime = value + 1;
-
-    while (true) {
-        if (checkPrime(nextPrime)) {
-            return nextPrime;
+    bool flag = true;
+    uint64_t a = 0;
+    for (uint64_t j = (value + 1); flag == true; j++) {
+        if (checkPrime(j)) {
+            a = j;
+            break;
+        } else {
+            flag = true;
         }
-        nextPrime++;
     }
+    return a;
 }
 
 uint64_t sumPrime(uint64_t hbound) {
